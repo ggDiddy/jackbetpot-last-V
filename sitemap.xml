@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://jackbetpot.com/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://i.pinimg.com/564x/2b/a5/02/2ba5029905bf962f22a433827174acd8.jpg</image:loc>
+      <image:title>JackBetPot Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Sportsbooks -->
+  <url>
+    <loc>https://jackbetpot.com/sportsbooks.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Casinos -->
+  <url>
+    <loc>https://jackbetpot.com/casinos.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Predictions -->
+  <url>
+    <loc>https://jackbetpot.com/predictions.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Betting School -->
+  <url>
+    <loc>https://jackbetpot.com/betting-school.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQ -->
+  <url>
+    <loc>https://jackbetpot.com/faq.html</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

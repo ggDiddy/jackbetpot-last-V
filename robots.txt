@@ -1,0 +1,16 @@
+# Robots.txt for JackBetPot
+# https://jackbetpot.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and system files
+Disallow: /.vscode/
+Disallow: /*.py$
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://jackbetpot.com/sitemap.xml
