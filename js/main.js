@@ -22,16 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Back to Top Button
   const backToTop = document.querySelector('.back-to-top');
-  
+
   if (backToTop) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
     backToTop.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
@@ -57,14 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const question = item.querySelector('.faq-question');
     if (question) {
       question.addEventListener('click', () => {
-        // Close other items
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-          }
-        });
-        // Toggle current item
-        item.classList.toggle('active');
+        const isActive = item.classList.contains('active');
+        const currentActive = document.querySelector('.faq-item.active');
+        if (currentActive) currentActive.classList.remove('active');
+        if (!isActive) item.classList.add('active');
       });
     }
   });
@@ -129,13 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
       levelTabs.forEach(t => t.classList.remove('active'));
       this.classList.add('active');
       
-      // Show corresponding content
       levelContents.forEach(content => {
-        if (content.getAttribute('data-level') === level) {
-          content.style.display = 'grid';
-        } else {
-          content.style.display = 'none';
-        }
+        content.classList.toggle('active', content.getAttribute('data-level') === level);
       });
     });
   });
@@ -172,18 +155,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Navbar Background on Scroll
+  // Navbar Background on Scroll + Back to Top visibility — single listener
   const navbar = document.querySelector('.navbar');
-  
-  if (navbar) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.4)';
-      } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
-      }
-    });
-  }
+
+  window.addEventListener('scroll', function() {
+    const y = window.scrollY;
+    if (navbar) {
+      navbar.style.boxShadow = y > 50
+        ? '0 2px 30px rgba(0,0,0,0.4)'
+        : '0 2px 20px rgba(0,0,0,0.3)';
+    }
+    if (backToTop) {
+      backToTop.classList.toggle('visible', y > 300);
+    }
+  });
 
   // Bottom Banner Close Functionality
   const bottomBanner = document.getElementById('bottomBanner');
