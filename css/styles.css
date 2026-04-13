@@ -1405,6 +1405,11 @@ a:hover {
   padding-left: 20px;
 }
 
+/* Frozen partners */
+.bcgame-frozen {
+  display: none !important;
+}
+
 /* Footer */
 .footer {
   background: var(--navy-dark);
