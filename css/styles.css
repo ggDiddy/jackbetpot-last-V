@@ -198,6 +198,29 @@ a:hover {
   animation: fadeInUp 0.8s ease-out;
 }
 
+.hero-note {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.hero-warning {
+  margin-top: 1rem;
+  padding: 16px 20px;
+  border-left: 4px solid var(--warning);
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  max-width: 720px;
+}
+
+.hero-warning strong {
+  color: #ffffff;
+}
+
 .hero-subtitle a {
   color: #148bec;
   text-decoration: none;
@@ -215,6 +238,23 @@ a:hover {
   flex-wrap: wrap;
   margin-top: 1rem;
   animation: fadeInUp 1s ease-out;
+}
+
+.hero-quick-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.hero-fact {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.95);
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
 .btn {
@@ -1598,6 +1638,10 @@ a:hover {
   
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-quick-facts {
+    grid-template-columns: 1fr;
   }
   
   .hero-buttons {
